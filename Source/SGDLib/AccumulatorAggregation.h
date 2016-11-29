@@ -91,8 +91,7 @@ void AggregateAccumulatorValuesAndUpdateEvaluation(
     }
 
     // Update output values of nodes between accumulator nodes and evaluation nodes.
-    std::set<ComputationNodeBasePtr> forwardPropFrom(allEpochAccumulatorNodes.begin(), allEpochAccumulatorNodes.end());
-    net->ForwardProp(forwardPropFrom, evalNodesWhichAccumulateResult);
+    net->ForwardProp(evalNodesWhichAccumulateResult);
 }
 }}}
 #pragma warning(pop)
