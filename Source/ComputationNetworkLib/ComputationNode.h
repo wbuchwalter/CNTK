@@ -259,7 +259,7 @@ public:
 
     int64_t CreateUniqId() const
     {
-        return atomic_fetch_add(&s_timeStampCounter, (unsigned long long int) 1);
+        return atomic_fetch_add(&s_timeStampCounter, (unsigned long long int) 1) + 1;
     }
 
 private:
